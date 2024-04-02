@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build and Run Containers') {
+            steps {
+                script {
+                    sh 'chmod +x start_containers.sh'
+                    sh './startContainers.sh'
+                }
+            }
+        }
+    }
+}
