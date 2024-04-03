@@ -5,8 +5,8 @@ pipeline {
         stage('Build and Run Containers') {
             steps {
                 script {
-                    sh 'chmod +x startContainers.sh'
-                    sh './startContainers.sh'
+                    sh 'chmod +x startContainer.sh' // Ensure the script is executable
+                    sh './startContainer.sh' // Execute the script
                 }
             }
         }
